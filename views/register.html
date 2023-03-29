@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Register</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+        <link rel='stylesheet' type='text/css' href='public/rest.css'>
+        <script src="public/register.js" defer></script>
+      </head>
+  <body>
+    <a id="loginLink" href="/">Home</a>
+    <h2>Already have an account?</h2> <br>
+    <a id="loginLink" href="/login" class=".buttonColor">Login</a>
+    <h2>Sign Up/Register An Account</h2>
+    <form name='register_form' action='/users' method='POST'>
+        <div class='form_row'>
+    <label for="username">Username: (3-15 characters)</label >
+    <input type="text" id="username" name="username" required minlength="3" maxlength="15"><br><br>
+    <label for="password">Password: (3-15 characters)</label>
+    <input type="text" id="password" name="password" required minlength="3" maxlength="15"><br><br>
+    <label for="name">First Name: </label>
+    <input type="text" id="first_name" name="first_name" required minlength="1"><br><br>
+    <label for="name">Last Name: </label>
+    <input type="text" id="last_name" name="last_name" required minlength="1"><br><br>
+    <label for="name">Email: </label>
+    <input type="email" id="email" name="email" required minlength="5"><br><br>
+    <label for="name">Student ID: </label>
+    <input type="text" id="student_id" name="student_id" required minlength="1"><br><br>
+
+    <input type="submit" value="Register" class=".buttonColor">
+        </div>
+        </form>
+    
+</body>
+</html>

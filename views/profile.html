@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Profile</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' href='public/rest.css'>
+    <script src="public/profile.js" defer></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/home">Home</a>
+      <a href="/mvp_updates">MVP Updates</a>
+      <a class="active" >Profile</a>
+      <a href="/leaderboard">Leaderboard</a>
+      <div class='logout_menu'> Logout </div>
+    </div>
+      <h2> User Profile</h2>
+      <div> Username: <span id="username">{{ session['username'] }}</span> 
+      <div id="first_name"></div>
+      <div id="last_name"></div>
+      <div id="email"></div>
+      <div>
+        <form name='edit_user' action='' method='PUT' data-id=''>
+            <div class='form_row'>
+             <h2> Edit User: </h2>
+              <input type='text' id= "fn" name='first_name' placeholder='First Name' value='' autofocus>
+              <input type='text' id = "ln" name='last_name' placeholder='Last Name' value=''>
+              <input type='text' id= "sID" name='student_id' placeholder='Student ID' value=''>
+              <input type='text' id = "em" name='email' placeholder='Email' value=''>
+              <input type='text' id = "un" name='username' placeholder='Username' value=''>
+              <input type='password' id = "pwd" name='password' placeholder='********' required>
+              <br><br>
+              <span class='cancel_button'>Cancel</span>
+              <span class='save_button'>Save</span>
+            </div>
+          </form>
+      </div>
+    </main>
+  </body>
+</html>
